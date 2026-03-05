@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
+//Importamos la libreria de React-router
+import { BrowserRouter } from 'react-router-dom';
+
+// Importamos la libreria de StyledComponents
+import { ThemeProvider } from 'styled-components';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Theme } from './assets/theme/theme';
+import { GlobalStyle } from './assets/theme/GlobalStyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
