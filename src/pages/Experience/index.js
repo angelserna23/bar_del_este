@@ -48,7 +48,7 @@ const Experience = () => {
 
                     <ItemExperience>
                         <Bullet>•</Bullet>
-                        Cocina limitada del día: si se acaba, se acaba (como en Europa).
+                        Cocina limitada del día: si se acaba, se acaba.
                     </ItemExperience>
 
                     <ItemExperience>
