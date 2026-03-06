@@ -18,11 +18,11 @@ const Home = () => {
     return(
         <MainHome>
             <Header/>
-            <AboutUs/>
+            <Promos/>
             <Menu/>
             <Location/>
             <Comments/>
-            <Promos/>
+            <AboutUs/>
             <Footer/>
         </MainHome>
     )

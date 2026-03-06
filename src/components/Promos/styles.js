@@ -39,13 +39,17 @@ const TitlePromos = styled.h2`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 2rem;
   margin: 1rem 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    font-size: 1.5rem;
+  }
 `;
 
 /* ✅ Solo desktop */
 const DesktopOnly = styled.div`
   display: block;
 
-  @media (max-width: 1023px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: none;
   }
 `;
