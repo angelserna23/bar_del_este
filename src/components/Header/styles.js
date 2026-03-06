@@ -4,26 +4,33 @@ import { Link } from "react-router-dom";
 const HeaderInit = styled.header`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   margin-top: 2rem;
   margin-bottom: 2rem;
   position: relative;
+  margin: 3rem 2rem;
+  gap: 2rem;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: 0;
+    justify-content: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     flex-direction: column;
     align-items: stretch;
     padding: 0 1rem;
-    }
+  }
 `;
 
 const LogoWrapper = styled.a`
-  width: 8%;
+  width: 20%;
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 13%;
+    width: 30%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
@@ -64,12 +71,12 @@ const StyledLink = styled(Link)`
 const NavContent = styled.nav`
   display: flex;
   flex-direction: row;
-  gap: 8rem;
+  gap: 5rem;
   box-sizing: border-box;
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    gap: 1.5rem;
+    gap: 3rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
@@ -88,7 +95,7 @@ const NavContent = styled.nav`
 `;
 
 const Reservar = styled.a`
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   background-color: ${({ theme }) => theme.colors.gold};
   color: ${({ theme }) => theme.colors.bg};
   font-weight: 700;
@@ -97,6 +104,7 @@ const Reservar = styled.a`
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: ${({ theme }) => theme.shadows.soft};
+  text-align: center;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.wine};

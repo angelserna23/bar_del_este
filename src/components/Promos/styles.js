@@ -49,7 +49,7 @@ const TitlePromos = styled.h2`
 const DesktopOnly = styled.div`
   display: block;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;
@@ -58,16 +58,16 @@ const DesktopOnly = styled.div`
 const MobileOnly = styled.div`
   display: none;
 
-  /* Swiper dots */
   .swiper-pagination-bullet {
     background: rgba(198, 161, 91, 0.35);
     opacity: 1;
   }
+
   .swiper-pagination-bullet-active {
     background: rgba(198, 161, 91, 0.95);
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: block;
   }
 `;
